@@ -5,6 +5,16 @@
   tags:
     - enableAutoUpdates
     
+- name: Fixing Configuration Files
+  template:
+    src: dnf-automatic.template
+    dest: /etc/dnf/automatic.conf
+    mode: 0644
+    owner: root
+    group: root
+  tags:
+    - enableAutoUpdates
+    
 - name: Fixing Services
   systemd:
     name: "{{ item.name }}"
