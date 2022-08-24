@@ -2,24 +2,24 @@
 #  What kind of upgrade to perform:
 # default                            = all available upgrades
 # security                           = only the security upgrades
-upgrade_type = {{ GLOBAL.dnf-upgrade_type }}
+upgrade_type = {{ dnf.upgrade_type }}
 random_sleep = 0
 
 # Maximum time in seconds to wait until the system is on-line and able to
 # connect to remote repositories.
-network_online_timeout = {{ GLOBAL.dnf-network_online_timeout }}
+network_online_timeout = {{ dnf.network_online_timeout }}
 
 # To just receive updates use dnf-automatic-notifyonly.timer
 
 # Whether updates should be downloaded when they are available, by
 # dnf-automatic.timer. notifyonly.timer, download.timer and
 # install.timer override this setting.
-download_updates = {{ GLOBAL.dnf-download_updates }}
+download_updates = {{ dnf.download_updates }}
 
 # Whether updates should be applied when they are available, by
 # dnf-automatic.timer. notifyonly.timer, download.timer and
 # install.timer override this setting.
-apply_updates = {{ GLOBAL.dnf-apply_updates }}
+apply_updates = {{ dnf.apply_updates }}
 
 
 [emitters]
@@ -36,7 +36,7 @@ apply_updates = {{ GLOBAL.dnf-apply_updates }}
 # command compatible with sendmail.
 # Default is email,stdio.
 # If emit_via is None or left blank, no messages will be sent.
-emit_via = {{ GLOBAL.dnf-emit_via }}
+emit_via = {{ dnf.emit_via }}
 
 
 [email]
