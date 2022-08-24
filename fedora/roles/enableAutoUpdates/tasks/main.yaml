@@ -20,6 +20,7 @@
     name: "{{ item.name }}"
     state: "{{ item.state }}"
     enabled: "{{ item.enabled }}"
+    daemon_reload: yes
   with_items:
     - { name: "dnf-automatic-install.timer", state: "started", enabled: "yes" }
     - { name: "dnf-automatic-download.timer", state: "started", enabled: "yes" }
