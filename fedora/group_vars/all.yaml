@@ -1,0 +1,6 @@
+GLOBAL:
+  dnf-upgrade_type: default
+  dnf-network_online_timeout: 120
+  dnf-download_updates: yes
+  dnf-apply_updates: yes
+  dnf-emit_via: None
