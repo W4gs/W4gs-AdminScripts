@@ -3,5 +3,6 @@
   become: yes
   become_user: root
   become_method: sudo
+  gather_facts: no
   roles:
     - enableAutoUpdates
