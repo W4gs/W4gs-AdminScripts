@@ -1,0 +1,17 @@
+- name: Installing dnf-automatic
+  yum:
+    name: "dnf-automatic"
+    state: latest
+  tags:
+    - enableAutoUpdates
+    
+- name: Fixing Services
+  systemd:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+    enabled: "{{ item.enabled }}"
+  with_items:
+    - { name: "dnf-automatic-install.timer", state: "started", enabled: "yes" }
+    - { name: "dnf-automatic-download.timer", state: "started", enabled: "yes" }
+  tags:
+    - enableAutoUpdates
