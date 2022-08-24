@@ -1,4 +1,4 @@
-DNF:
+dnf:
   upgrade_type: default
   network_online_timeout: 120
   download_updates: yes
