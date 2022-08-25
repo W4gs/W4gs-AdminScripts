@@ -4,3 +4,7 @@ dnf:
   download_updates: yes
   apply_updates: yes
   emit_via: None
+
+splunk:
+  forwarder_ip: 192.168.1.211
+  forwarder_port: 9997
