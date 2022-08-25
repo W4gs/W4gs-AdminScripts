@@ -1,1 +1,7 @@
+- name: Installing SplunkForwarder
+  yum:
+    name: "SplunkForwarder"
+    state: latest
+  tags:
+    - configSplunkForwarder
 
