@@ -17,3 +17,15 @@
     - /opt/splunkforwarder/var/run/splunk/confsnapshot/baseline_local/system/local/outputs.conf
   tags:
     - configSplunkForwarder
+
+- name: Starting SplunkForwarder
+  systemd:
+    name: "SplunkForwarder"
+    state: "{{ item }}"
+    enabled: "yes"
+    daemon_reload: "yes"
+  with_items:
+    - "started"
+    - "restarted"
+  tags:
+    - configSplunkForwarder
