@@ -5,3 +5,15 @@
   tags:
     - configSplunkForwarder
 
+- name: Fixing Configuration Files
+  template:
+    src: outputs.template
+    dest: {{ item }}
+    mode: 0600
+    owner: splunk
+    group: splunk
+  with_items:
+    - /opt/splunkforwarder/etc/system/local/outputs.conf
+    - /opt/splunkforwarder/var/run/splunk/confsnapshot/baseline_local/system/local/outputs.conf
+  tags:
+    - configSplunkForwarder
