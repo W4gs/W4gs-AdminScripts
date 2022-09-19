@@ -22,8 +22,9 @@ intUpperSleep = 20
 #--------------------------------------------------------------------------------------------------
 # Configuration Section
 # arrURL: Enter your specific web addresses in an array format.
-# arrScanExts: The extensions of the specific files you want downloaded
 arrURL = [ "" ]
+
+# arrScanExts: The extensions of the specific files you want downloaded
 arrScanExts = [ "zip", "tar", "gz", "doc", "docx", "xls", "xlsx", "csv", "pdf", "ppt", "txt" ]
 # End Configuration Section
 #--------------------------------------------------------------------------------------------------
